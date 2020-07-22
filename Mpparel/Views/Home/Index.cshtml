@@ -1,0 +1,603 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container-fluid category-section">
+    <div class="ps-block--products-of-category" id="area-1">
+        <div class="ps-block__categories">
+            <h3>Women</h3>
+            <ul>
+                <li><a href="#">Best Seller</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Bras</a></li>
+                <li><a href="#">Penties</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">SleepWear</a></li>
+                <li><a href="#">LegWear</a></li>
+                <li><a href="#">Socks</a></li>
+            </ul><a class="ps-block__more-link" href="#">View All</a>
+        </div>
+        <div class="ps-block__slider">
+            <div class="ps-carousel--product-box owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="7000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="500" data-owl-mousedrag="off">
+                <a href="#"><img src="img/slider/home-3/clothing-1.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/clothing-2.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/clothing-3.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="ps-block__product-box" id="Clothing_Apparel">
+            <div class="ps-product ps-product--simple" v-for="product in products">
+                <div class="ps-product__thumbnail">
+                    <a v-bind:href="product.url"><img v-bind:src="product.image" alt=""></a>
+                    <div class="ps-product__badge" v-if="product.discount!=''">{{ product.discount }}</div>
+                    <ul class="ps-product__actions">
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                        <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ps-product__container">
+                    <div class="ps-product__content" data-mh="clothing">
+                        <a class="ps-product__title" v-bind:href="product.url">{{ product.title }}</a>
+                        <div class="ps-product__rating">
+                            <select class="ps-rating" data-read-only="true">
+                                <option v-for="rating in product.ratingArray" v-bind:value="rating">{{rating}}</option>
+                            </select><span>{{ product.rating }}</span>
+
+                        </div>
+                        <p class="ps-product__price sale">{{ product.discountRate }} <del>{{ product.originalRate }} </del></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ps-block--products-of-category" id="area-2">
+        <div class="ps-block__categories">
+            <h3>Men</h3>
+            <ul>
+                <li><a href="#">Best Seller</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">UnderWear</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Bottoms</a></li>
+                <li><a href="#">SleepWear</a></li>
+                <li><a href="#">Ultimate Underwear</a></li>
+                <li><a href="#">Socks</a></li>
+                <li><a href="#">Louge</a></li>
+                <li><a href="#">Boxers</a></li>
+                <li><a href="#">Sales & Deals</a></li>
+            </ul><a class="ps-block__more-link" href="#">View All</a>
+        </div>
+        <div class="ps-block__slider">
+            <div class="ps-carousel--product-box owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="7000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="500" data-owl-mousedrag="off">
+                <a href="#"><img src="img/slider/home-3/technology-1.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/technology-2.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/technology-3.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="ps-block__product-box" id="Computer_Techologies">
+            <div class="ps-product ps-product--simple" v-for="product in products">
+                <div class="ps-product__thumbnail">
+                    <a v-bind:href="product.url"><img v-bind:src="product.image" alt=""></a>
+                    <div class="ps-product__badge" v-if="product.discount!=''">{{ product.discount }}</div>
+                    <ul class="ps-product__actions">
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                        <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ps-product__container">
+                    <div class="ps-product__content" data-mh="clothing">
+                        <a class="ps-product__title" v-bind:href="product.url">{{ product.title }}</a>
+                        <div class="ps-product__rating">
+                            <select class="ps-rating" data-read-only="true">
+                                <option v-for="rating in product.ratingArray" v-bind:value="rating">{{rating}}</option>
+                            </select><span>{{ product.rating }}</span>
+
+                        </div>
+                        <p class="ps-product__price sale">{{ product.discountRate }} <del>{{ product.originalRate }} </del></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ps-block--products-of-category" id="area-3">
+        <div class="ps-block__categories">
+            <h3>Kids</h3>
+            <ul>
+                <li><a href="shop-default.html">Best Seller</a></li>
+                <li><a href="shop-default.html">New Arrivals</a></li>
+                <li><a href="shop-default.html">TV Television</a></li>
+                <li><a href="shop-default.html">Air Condition</a></li>
+                <li><a href="shop-default.html">Washing Machine</a></li>
+                <li><a href="shop-default.html">Microwave</a></li>
+                <li><a href="shop-default.html">Refrigerator</a></li>
+                <li><a href="shop-default.html">Office Electronic</a></li>
+                <li><a href="shop-default.html">Car Electronic</a></li>
+                <li><a href="shop-default.html">Sales & Deals</a></li>
+            </ul><a class="ps-block__more-link" href="#">View All</a>
+        </div>
+        <div class="ps-block__slider">
+            <div class="ps-carousel--product-box owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="7000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="500" data-owl-mousedrag="off">
+                <a href="#"><img src="img/slider/home-3/electronic-1.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/electronic-2.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/electronic-3.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="ps-block__product-box" id="Consumer_Electronics">
+            <div class="ps-product ps-product--simple" v-for="product in products">
+                <div class="ps-product__thumbnail">
+                    <a v-bind:href="product.url"><img v-bind:src="product.image" alt=""></a>
+                    <div class="ps-product__badge" v-if="product.discount!=''">{{ product.discount }}</div>
+                    <ul class="ps-product__actions">
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                        <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ps-product__container">
+                    <div class="ps-product__content" data-mh="clothing">
+                        <a class="ps-product__title" v-bind:href="product.url">{{ product.title }}</a>
+                        <div class="ps-product__rating">
+                            <select class="ps-rating" data-read-only="true">
+                                <option v-for="rating in product.ratingArray" v-bind:value="rating">{{rating}}</option>
+                            </select><span>{{ product.rating }}</span>
+
+                        </div>
+                        <p class="ps-product__price sale">{{ product.discountRate }} <del>{{ product.originalRate }} </del></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ps-block--products-of-category" id="area-4">
+        <div class="ps-block__categories">
+            <h3>Home, Garden & Kitchen</h3>
+            <ul>
+                <li><a href="shop-default.html">Best Seller</a></li>
+                <li><a href="shop-default.html">New Arrivals</a></li>
+                <li><a href="shop-default.html">Boys</a></li>
+                <li><a href="shop-default.html">Girls</a></li>
+                <li><a href="shop-default.html">Tops</a></li>
+                <li><a href="shop-default.html">Botoms</a></li>
+                <li><a href="shop-default.html">UnderWear</a></li>
+                <li><a href="shop-default.html">SleepWear</a></li>
+                <li><a href="shop-default.html">Socks</a></li>
+            </ul><a class="ps-block__more-link" href="#">View All</a>
+        </div>
+        <div class="ps-block__slider">
+            <div class="ps-carousel--product-box owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="7000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="500" data-owl-mousedrag="off">
+                <a href="#"><img src="img/slider/home-3/kitchen-1.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/kitchen-2.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/kitchen-3.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="ps-block__product-box" id="Home_Garden_Kitchen">
+            <div class="ps-product ps-product--simple" v-for="product in products">
+                <div class="ps-product__thumbnail">
+                    <a v-bind:href="product.url"><img v-bind:src="product.image" alt=""></a>
+                    <div class="ps-product__badge" v-if="product.discount!=''">{{ product.discount }}</div>
+                    <ul class="ps-product__actions">
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                        <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ps-product__container">
+                    <div class="ps-product__content" data-mh="clothing">
+                        <a class="ps-product__title" v-bind:href="product.url">{{ product.title }}</a>
+                        <div class="ps-product__rating">
+                            <select class="ps-rating" data-read-only="true">
+                                <option v-for="rating in product.ratingArray" v-bind:value="rating">{{rating}}</option>
+                            </select><span>{{ product.rating }}</span>
+
+                        </div>
+                        <p class="ps-product__price sale">{{ product.discountRate }} <del>{{ product.originalRate }} </del></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ps-block--products-of-category" id="area-5">
+        <div class="ps-block__categories">
+            <h3>Healthy & Beauty</h3>
+            <ul>
+                <li><a href="shop-default.html">Best Seller</a></li>
+                <li><a href="shop-default.html">New Arrivals</a></li>
+                <li><a href="shop-default.html">Makeup</a></li>
+                <li><a href="shop-default.html">Skin Care</a></li>
+                <li><a href="shop-default.html">Hair Care</a></li>
+                <li><a href="shop-default.html">Tools & Equipments</a></li>
+                <li><a href="shop-default.html">Perfumer & Cologine</a></li>
+                <li><a href="shop-default.html">Sales & Deals</a></li>
+            </ul><a class="ps-block__more-link" href="#">View All</a>
+        </div>
+        <div class="ps-block__slider">
+            <div class="ps-carousel--product-box owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="7000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="500" data-owl-mousedrag="off">
+                <a href="#"><img src="img/slider/home-3/healthy-1.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/healthy-2.jpg" alt=""></a>
+                <a href="#"><img src="img/slider/home-3/healthy-3.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="ps-block__product-box" id="Healthy_Beauty">
+            <div class="ps-product ps-product--simple" v-for="product in products">
+                <div class="ps-product__thumbnail">
+                    <a v-bind:href="product.url"><img v-bind:src="product.image" alt=""></a>
+                    <div class="ps-product__badge" v-if="product.discount!=''">{{ product.discount }}</div>
+                    <ul class="ps-product__actions">
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Read More"><i class="icon-bag2"></i></a></li>
+                        <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ps-product__container">
+                    <div class="ps-product__content" data-mh="clothing">
+                        <a class="ps-product__title" v-bind:href="product.url">{{ product.title }}</a>
+                        <div class="ps-product__rating">
+                            <select class="ps-rating" data-read-only="true">
+                                <option v-for="rating in product.ratingArray" v-bind:value="rating">{{rating}}</option>
+                            </select><span>{{ product.rating }}</span>
+
+                        </div>
+                        <p class="ps-product__price sale">{{ product.discountRate }} <del>{{ product.originalRate }} </del></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var Clothing_Apparel = new Vue({
+        el: '#Clothing_Apparel',
+        data: {
+            products:
+                [
+                    {
+                        url: 'product-default.html',
+                        image: ' img/Henes/women/hns_dhhu22_hns_dhhu22_softtaupe_front.jpg',
+                      
+                        discount: '-16%',
+                        title: 'Herschel Leather Duffle Bag In Brown Color',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$567.99',
+                        originalRate: '$670.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/women/hns_mhg196_hns_mhg196_white_front.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Unero Military Classical Backpack',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$567.99',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/women/hns_mhg521_hns_mhg521_blacknude_front.jpg',
+                        discount: '-25%',
+                        title: 'Rayban Rounded Sunglass Brown Color',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '02',
+                        discountRate: '$42.00',
+                        originalRate: '$60.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/women/hns_mhg561_hns_mhg561_black_front.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Sleeve Linen Blend Caro Pane Shirt',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$320.00',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/women/hns_mhg796_inthenavy_front.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Men’s Sports Runnning Swim Board Shorts',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$85.00',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/women/hns_mhh570_hns_mhh570_whitepink_front.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Paul’s Smith Sneaker InWhite Color',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$92.00',
+                        originalRate: ''
+                    }
+                ]
+        }
+    });
+    var Computer_Techologies = new Vue({
+        el: '#Computer_Techologies',
+        data: {
+            products:
+                [
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/men/hns_f174_hns_f174_navy_front.jpg',
+                        discount: '',
+                        title: 'Sound Intone I65 Earphone White Version',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$105.30',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/men/hns_f264_hns_f264_black_front.jpg',
+                        discount: '7%',
+                        title: 'Beat Spill 2.0 Wireless Speaker – White',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$125.00',
+                        originalRate: '$135.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/men/hns_f284_hns_f284_navy_front.jpg',
+                        discount: '-25%',
+                        title: 'ASUS Chromebook Flip – 10.2 Inch',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '02',
+                        discountRate: '$990.00',
+                        originalRate: '$1250.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/men/hns_p160_hns_p160_safetygreen_front.jpg',
+                        discount: '10%',
+                        title: 'Apple Macbook Retina Display 12”',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '04',
+                        discountRate: '$1090.00',
+                        originalRate: '$1550.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/men/hns_p170_white_coed.jpg',
+                        discount: '',
+                        title: 'Samsung Gear VR Virtual Reality Headset',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$85.00',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/men/hns_p650_hns_p650_deeproyal_front.jpg',
+                        discount: '',
+                        title: 'Apple iPhone Retina 6s Plus 64GB',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$950.00',
+                        originalRate: ''
+                    }
+                ]
+        }
+    });
+    var Consumer_Electronics = new Vue({
+        el: '#Consumer_Electronics',
+        data: {
+            products:
+                [
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/kids/hns_054y_hns_054y_navy_front.jpg',
+                        discount: '-16%',
+                        title: 'Marshall Kilburn Portable Wireless',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$567.99',
+                        originalRate: '$670.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/kids/44.jpeg',
+                        discount: 'Out Of Stock',
+                        title: 'Xbox One Wireless Controller Black Color',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$101.99',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/kids/33.jpeg',
+                        discount: '-25%',
+                        title: 'Sound Intone I65 Earphone White Version',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '02',
+                        discountRate: '$42.00',
+                        originalRate: '$60.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/kids/22.jpeg',
+                        discount: 'Out Of Stock',
+                        title: 'Samsung Gear VR Virtual Reality Headset',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$320.00',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/kids/12.jpeg',
+            
+                        discount: 'Out Of Stock',
+                        title: 'Samsung UHD TV 24inch',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$85.00',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/Henes/kids/hns_d206_hns_d206_athletic89navy_front.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'EPSION Plaster Printer',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$92.00',
+                        originalRate: ''
+                    }
+                ]
+        }
+    });
+
+    var Home_Garden_Kitchen = new Vue({
+        el: '#Home_Garden_Kitchen',
+        data: {
+            products:
+                [
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home/1.jpg',
+                        discount: '-16%',
+                        title: 'Korea Long Sofa Fabric In Blue Navy Color',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$567.99',
+                        originalRate: '$670.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home/2.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Aroma Rice Cooker',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$101.99',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home/3.jpg',
+                        discount: '-25%',
+                        title: 'Simple Plastice Chair In White Color',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '02',
+                        discountRate: '$42.00',
+                        originalRate: '$60.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home/4.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Korea Fabric Chair In Brown Color',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$320.00',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home/5.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Set 14-Piece Knife From KichiKit',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$85.00',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home/6.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Magic Bullet NutriBullet Pro 900 Series Blender',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$92.00',
+                        originalRate: ''
+                    }
+                ]
+        }
+    });
+
+    var Healthy_Beauty = new Vue({
+        el: '#Healthy_Beauty',
+        data: {
+            products:
+                [
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home-3/healthy/1.jpg',
+                        discount: '-16%',
+                        title: 'Aveeno Moisturizing Body Shower 450ml',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$567.99',
+                        originalRate: '$670.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home-3/healthy/2.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'NYX Beauty Couton Pallete Makeup 12',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$101.99',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home-3/healthy/3.jpg',
+                        discount: '-25%',
+                        title: 'Baxter Care Hair Kit For Bearded Mens',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '02',
+                        discountRate: '$42.00',
+                        originalRate: '$60.00'
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home-3/healthy/4.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Anna Sui Putty Mask Perfection',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$320.00',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home-3/healthy/5.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Set 30 Piece Korea StartSkin Natural Mask',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$85.00',
+                        originalRate: ''
+                    },
+                    {
+                        url: 'product-default.html',
+                        image: 'img/products/home-3/healthy/6.jpg',
+                        discount: 'Out Of Stock',
+                        title: 'Ciate Palemore Lipstick Bold Red Color',
+                        ratingArray: ['1', '1', '1', '1', '2'],
+                        rating: '01',
+                        discountRate: '$92.00',
+                        originalRate: ''
+                    }
+                ]
+        }
+    });
+</script>

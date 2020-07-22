@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A0C9CBC-938D-4894-8AF8-C79B649A7F1D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mpparel</RootNamespace>
+    <AssemblyName>Mpparel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44392</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Css\autopart.css" />
+    <Content Include="Css\custom-color.css" />
+    <Content Include="Css\custom.css" />
+    <Content Include="Css\electronic.css" />
+    <Content Include="Css\furniture.css" />
+    <Content Include="Css\home-kids.css" />
+    <Content Include="Css\home-photo.css" />
+    <Content Include="Css\market-place-1.css" />
+    <Content Include="Css\market-place-2.css" />
+    <Content Include="Css\market-place-3.css" />
+    <Content Include="Css\market-place-4.css" />
+    <Content Include="Css\organic.css" />
+    <Content Include="Css\style.css" />
+    <Content Include="Css\technology.css" />
+    <Content Include="Css\vendor.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Linearicons\Linearicons\Font\demo-files\demo.css" />
+    <Content Include="fonts\Linearicons\Linearicons\Font\demo-files\demo.js" />
+    <Content Include="fonts\Linearicons\Linearicons\Font\demo-files\liga.js" />
+    <Content Include="fonts\Linearicons\Linearicons\Font\Read Me.txt" />
+    <Content Include="fonts\Linearicons\Linearicons\Font\Reference.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="img\favicon.png" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Plugins\Chart.js\Chart.min.js" />
+    <Content Include="Plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="Plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Plugins\gmap3.min.js" />
+    <Content Include="Plugins\imagesloaded.pkgd.js" />
+    <Content Include="Plugins\isotope.pkgd.js" />
+    <Content Include="Plugins\jquery-1.12.4.min.js" />
+    <Content Include="Plugins\jquery-3.4.1.min.js" />
+    <Content Include="Plugins\jquery-3.5.0.js" />
+    <Content Include="Plugins\jquery-bar-rating\dist\jquery.barrating.js" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\bars-1to10.css" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\bars-horizontal.css" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\bars-movie.css" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\bars-pill.css" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\bars-reversed.css" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\bars-square.css" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\bootstrap-stars.css" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\css-stars.css" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\fontawesome-stars-o.css" />
+    <Content Include="Plugins\jquery-bar-rating\dist\themes\fontawesome-stars.css" />
+    <Content Include="Plugins\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="Plugins\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="Plugins\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="Plugins\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="Plugins\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="Plugins\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Plugins\jquery.countTo.js" />
+    <Content Include="Plugins\jquery.matchHeight.js" />
+    <Content Include="Plugins\jquery.parallax-1.1.3.js" />
+    <Content Include="Plugins\jquery.waypoints.min.js" />
+    <Content Include="Plugins\jquery\dist\jquery.js" />
+    <Content Include="Plugins\jquery\dist\jquery.min.js" />
+    <Content Include="Plugins\lazyload\dist\lazyload.amd.js" />
+    <Content Include="Plugins\lazyload\dist\lazyload.amd.min.js" />
+    <Content Include="Plugins\lazyload\dist\lazyload.esm.js" />
+    <Content Include="Plugins\lazyload\dist\lazyload.iife.js" />
+    <Content Include="Plugins\lazyload\dist\lazyload.iife.min.js" />
+    <Content Include="Plugins\lazyload\dist\lazyload.js" />
+    <Content Include="Plugins\lazyload\dist\lazyload.min.js" />
+    <Content Include="Plugins\lazyload\img\browserstack-logo-600x315.png" />
+    <Content Include="Plugins\lightGallery-master\dist\css\lg-fb-comment-box.css" />
+    <Content Include="Plugins\lightGallery-master\dist\css\lg-fb-comment-box.min.css" />
+    <Content Include="Plugins\lightGallery-master\dist\css\lg-transitions.css" />
+    <Content Include="Plugins\lightGallery-master\dist\css\lg-transitions.min.css" />
+    <Content Include="Plugins\lightGallery-master\dist\css\lightgallery.css" />
+    <Content Include="Plugins\lightGallery-master\dist\css\lightgallery.min.css" />
+    <Content Include="Plugins\lightGallery-master\dist\fonts\lg.svg" />
+    <Content Include="Plugins\lightGallery-master\dist\img\loading.gif" />
+    <Content Include="Plugins\lightGallery-master\dist\img\video-play.png" />
+    <Content Include="Plugins\lightGallery-master\dist\img\vimeo-play.png" />
+    <Content Include="Plugins\lightGallery-master\dist\img\youtube-play.png" />
+    <Content Include="Plugins\lightGallery-master\dist\js\lightgallery-all.js" />
+    <Content Include="Plugins\lightGallery-master\dist\js\lightgallery-all.min.js" />
+    <Content Include="Plugins\lightGallery-master\dist\js\lightgallery.js" />
+    <Content Include="Plugins\lightGallery-master\dist\js\lightgallery.min.js" />
+    <Content Include="Plugins\masonry.pkgd.js" />
+    <Content Include="Plugins\nouislider\nouislider.min.css" />
+    <Content Include="Plugins\nouislider\nouislider.js" />
+    <Content Include="Plugins\nouislider\test.css" />
+    <Content Include="Plugins\owl-carousel\assets\ajax-loader.gif" />
+    <Content Include="Plugins\owl-carousel\assets\owl.carousel.css" />
+    <Content Include="Plugins\owl-carousel\assets\owl.carousel.min.css" />
+    <Content Include="Plugins\owl-carousel\assets\owl.theme.default.css" />
+    <Content Include="Plugins\owl-carousel\assets\owl.theme.default.min.css" />
+    <Content Include="Plugins\owl-carousel\assets\owl.theme.green.css" />
+    <Content Include="Plugins\owl-carousel\assets\owl.theme.green.min.css" />
+    <Content Include="Plugins\owl-carousel\assets\owl.video.play.png" />
+    <Content Include="Plugins\owl-carousel\owl.carousel.js" />
+    <Content Include="Plugins\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\assets\ajax-loader.gif" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\assets\owl.carousel.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\assets\owl.carousel.min.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\assets\owl.theme.default.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\assets\owl.theme.default.min.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\assets\owl.theme.green.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\assets\owl.theme.green.min.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\assets\owl.video.play.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\owl.carousel.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\owl.carousel.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\css\animate.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\css\docs.theme.min.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\bird_blue_32.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\download.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\feature-drag.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\feature-modern.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\feature-module.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\feature-options.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\feature-responsive.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\feature-zombie.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\owl-logo.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\img\twitter_25.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\js\app.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\js\foundation.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\owl.carousel.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\owl.carousel.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\vendors\foundation.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\vendors\highlight.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\vendors\jquery.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\vendors\jquery.mousewheel.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\animate.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\autoheight.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\autoplay.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\autowidth.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\basic.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\center.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\demos.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\events.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\lazyLoad.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\merge.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\mousewheel.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\responsive.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\rtl.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\stagepadding.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\test.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\urlhashnav.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\demos\video.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\api-classes.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\api-events.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\api-options.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\dev-buildin-plugins.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\dev-external.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\dev-plugin-api.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\dev-styles.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\started-faq.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\started-installation.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\started-welcome.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\support-changelog.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\support-contact.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\docs\support-contributing.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\index.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\css\animate.css" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\bird_blue_32.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\download.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\feature-drag.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\feature-modern.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\feature-module.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\feature-options.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\feature-responsive.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\feature-zombie.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\owl-logo.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\img\twitter_25.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\js\app.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\js\foundation.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\foundation.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\highlight.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\jquery.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\jquery.mousewheel.min.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\helpers\modulo.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\helpers\test.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\Gruntfile.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\img\ajax-loader.gif" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\img\owl.video.play.png" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.animate.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.autoheight.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.autoplay.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.autorefresh.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.carousel.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.hash.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.lazyload.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.navigation.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.support.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.support.modernizr.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\js\owl.video.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\test\index.html" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\test\unit\autoplay.js" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\test\unit\core.js" />
+    <Content Include="Plugins\popper.js" />
+    <Content Include="Plugins\select2\dist\css\select2.css" />
+    <Content Include="Plugins\select2\dist\css\select2.min.css" />
+    <Content Include="Plugins\select2\dist\js\select2.full.js" />
+    <Content Include="Plugins\select2\dist\js\select2.js" />
+    <Content Include="Plugins\select2\dist\js\select2.min.js" />
+    <Content Include="Plugins\slick-animation.js" />
+    <Content Include="Plugins\slick\slick\ajax-loader.gif" />
+    <Content Include="Plugins\slick\slick\fonts\slick.svg" />
+    <Content Include="Plugins\slick\slick\slick.css" />
+    <Content Include="Plugins\slick\slick\slick.js" />
+    <Content Include="Plugins\slick\slick\slick.min.js" />
+    <Content Include="Plugins\sticky-sidebar\dist\sticky-sidebar.js" />
+    <Content Include="Plugins\YTPlayer\dist\css\images\raster%402x.png" />
+    <Content Include="Plugins\YTPlayer\dist\css\images\raster.png" />
+    <Content Include="Plugins\YTPlayer\dist\css\images\raster_dot%402x.png" />
+    <Content Include="Plugins\YTPlayer\dist\css\images\raster_dot.png" />
+    <Content Include="Plugins\YTPlayer\dist\css\jquery.mb.YTPlayer.min.css" />
+    <Content Include="Plugins\YTPlayer\dist\index.html" />
+    <Content Include="Plugins\YTPlayer\dist\jquery.mb.YTPlayer.js" />
+    <Content Include="Plugins\YTPlayer\dist\jquery.mb.YTPlayer.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Plugins\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Plugins\jquery\dist\jquery.min.map" />
+    <Content Include="Plugins\lazyload\dist\lazyload.amd.min.js.map" />
+    <Content Include="Plugins\lazyload\dist\lazyload.iife.min.js.map" />
+    <Content Include="Plugins\lazyload\dist\lazyload.min.js.map" />
+    <Content Include="Plugins\lightGallery-master\dist\fonts\lg.eot" />
+    <Content Include="Plugins\lightGallery-master\dist\fonts\lg.ttf" />
+    <Content Include="Plugins\lightGallery-master\dist\fonts\lg.woff" />
+    <Content Include="Plugins\owl-carousel\LICENSE" />
+    <Content Include="Plugins\owl-carousel\README.md" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\bower.json" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\CONTRIBUTING.md" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\LICENSE" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\dist\README.md" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\owlcarousel\README.md" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs\assets\vendors\jquery.min.map" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\custom.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\demos.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\docs.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\docs.theme.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\highlight.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\scss\_settings.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\assets\vendors\jquery.min.map" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\data\classes.json" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\data\events.json" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\data\features.json" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\data\options.json" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\layouts\demos.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\layouts\docs.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\layouts\home.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\animate.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\autoheight.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\autoplay.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\autowidth.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\basic.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\center.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\demos.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\events.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\lazyLoad.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\merge.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\mousewheel.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\responsive.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\rtl.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\stagepadding.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\test.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\urlhashnav.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\demos\video.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\api-classes.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\api-events.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\api-options.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\dev-buildin-plugins.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\dev-external.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\dev-plugin-api.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\dev-styles.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\started-faq.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\started-installation.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\started-welcome.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\support-changelog.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\support-contact.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\docs\support-contributing.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\pages\index.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\footer.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\head.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\header.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\home-carousel.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\home-features.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\home-hero.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\home-teaser-text.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\javascripts.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\releated-docs.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\sidenav-docs.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\title.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\docs_src\templates\partials\vendors.hbs" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\ISSUE_TEMPLATE.md" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\LICENSE" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\package-lock.json" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\package.json" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\README.md" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\ROADMAP.md" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\owl.carousel.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\owl.theme.default.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\owl.theme.green.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\_animate.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\_autoheight.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\_core.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\_lazyload.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\_theme.default.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\_theme.green.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\_theme.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\src\scss\_video.scss" />
+    <Content Include="Plugins\OwlCarousel2-2.3.4\_config.json" />
+    <Content Include="Plugins\slick\slick\fonts\slick.eot" />
+    <Content Include="Plugins\slick\slick\fonts\slick.ttf" />
+    <Content Include="Plugins\slick\slick\fonts\slick.woff" />
+    <Content Include="Plugins\YTPlayer\dist\css\font\ytp-regular.eot" />
+    <Content Include="Plugins\YTPlayer\dist\css\font\ytp-regular.ttf" />
+    <Content Include="Plugins\YTPlayer\dist\css\font\ytp-regular.woff" />
+    <Content Include="fonts\Linearicons\Linearicons\Font\Linearicons.ttf" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\MpparelJs\common.js" />
+    <Content Include="Scripts\MpparelJs\custom.js" />
+    <Content Include="Scripts\MpparelJs\Drift.js" />
+    <Content Include="Scripts\MpparelJs\main.js" />
+    <Content Include="Scripts\MpparelJs\mpparel-custom.js" />
+    <Content Include="Scripts\MpparelJs\plugins.js" />
+    <Content Include="Scripts\vue.js" />
+    <Content Include="Scripts\vue.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\Home\ShopByDepartment.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\ShoppingCart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64101</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:44392/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

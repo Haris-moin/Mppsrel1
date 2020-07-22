@@ -1,0 +1,110 @@
+html {
+    --theme-color: #221f1f;
+    --theme-text-color: #221f1f;
+    --theme-color-dark: #000;
+    --theme-hover-color: #555;
+    --theme-text-color-dark: #000;
+    --theme-hover-text-color: #555;
+}
+
+/*Background Color---------------*/
+.header--standard .ps-form--quick-search button,
+.header--standard .header__extra span,
+.main-container .category-list,
+.ps-btn, button.ps-btn,
+.ps-product .ps-product__progress-bar .ps-progress__value > span,
+.ps-product .ps-product__badge,
+.menu--dropdown > li:hover,
+.ps-block--countdown-deal figure,
+.ps-product .ps-product__actions li a:hover,
+.header--mobile.header--sticky .navigation--mobile,
+.header--mobile,
+.ps-carousel--nav .owl-dots .owl-dot.active,
+.ps-product--detail .ps-tab-list li a:before,
+.pagination li.active a,
+.noUi-connect,
+.ps-product--detail .ps-product__gallery .slick-arrow:hover,
+.ps-product--quickview .ps-product__images .slick-arrow:hover,
+.pagination li > a:hover {
+    background-color: var(--theme-color) !important;
+    background: var(--theme-color) !important;
+}
+
+/*Text Color-----------*/
+.ps-product .ps-product__price.sale,
+.header--market-place-1 .header__extra:hover > i,
+.ps-cart--mini .ps-cart__footer h3 strong,
+.ps-product--cart-mobile .ps-product__content a:hover,
+.sub-menu > li > a:hover,
+.ps-dropdown > a:hover,
+.ps-block--site-features .ps-block__left i,
+.ps-product .ps-product__title:hover,
+.ps-deal-of-day .ps-section__header > a:hover,
+.ps-carousel--nav .owl-dots .owl-dot.active,
+.header--standard .ps-block--user-header a:hover,
+.ps-product--wide .ps-product__shopping .ps-product__actions li a:hover,
+.sizes > a:hover,
+.widget_shop .ps-checkbox input[type=checkbox]:checked ~ label,
+.mega-menu .mega-menu__list li a:hover,
+.ps-list--categories > .current-menu-item > a:hover,
+.ps-breadcrumb .breadcrumb a:hover,
+.ps-product--cart .ps-product__content a:hover,
+.ps-form--account .form-forgot > a:hover {
+    color: var(--theme-text-color) !important;
+}
+
+    .ps-deal-of-day .ps-section__header > a:hover,
+    .widget_shop .sizes a:hover,
+    .widget_shop .ps-checkbox input[type=checkbox]:checked ~ label:before,
+    .widget_shop .ps-checkbox > label:after,
+    .form-control:focus,
+    .ps-shopping-cart .ps-section__footer .ps-btn--outline:hover,
+    .ps-shopping-cart .ps-section__cart-actions .ps-btn--outline:hover,
+    .ps-product--detail .ps-product__variants .item.slick-current {
+        border-color: var(--theme-text-color) !important;
+    }
+.noUi-handle {
+    border: 3px solid var(--theme-color);
+}
+/*Background Dark Color*/
+.ps-form--quick-search button {
+    background-color: var(--theme-color-dark) !important;
+    background: var(--theme-color-dark) !important;
+}
+
+.ps-btn:hover, .ps-btn:active, button.ps-btn:hover, button.ps-btn:active {
+    background-color: var(--theme-hover-color) !important;
+    background: var(--theme-hover-color) !important;
+}
+/*Text Dark Color*/
+
+.ps-product .ps-product__price.sale,
+.menu--dropdown > li > a {
+    color: var(--theme-text-color-dark) !important;
+}
+
+/*Text Hover Color*/
+    .header--standard .ps-form--quick-search button,
+    .ps-form--quick-search button,
+    .ps-btn:hover, button.ps-btn:hover,
+    .header--market-place-1 .header__extra span i,
+    .ps-cart--mini figure .ps-btn,
+    .ps-btn, button.ps-btn,
+    .menu--dropdown > li > a:hover,
+    .pagination li.active a,
+    .pagination li > a:hover {
+        color: #fff !important;
+    }
+/*a:hover {
+    color: var(--theme-hover-text-color) !important;
+}*/
+/*.header--market-place-1 .header__top {
+    background: #fff !important;
+    background-color: #fff !important;
+}*/
+
+@media only screen and (max-width: 480px) {
+    .header .header__extra > i, .header--mobile .ps-block--user-header i {
+        color: #fff !important;
+    }
+}
